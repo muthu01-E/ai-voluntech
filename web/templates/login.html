@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+
 <div class="container">
-<h2>Login</h2>
-<form method="post">
-    <select name="role">
-        <option value="student">Student</option>
-        <option value="ngo">NGO</option>
-    </select>
-    <button>Login</button>
-</form>
+    <h2>Login</h2>
+
+    <form method="post" action="/login">
+        
+        <!-- Email -->
+        <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required
+        >
+
+        <!-- Password -->
+        <input 
+            type="password" 
+            name="password" 
+            placeholder="Enter your password" 
+            required
+        >
+
+        <!-- Role -->
+        <select name="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="student">Student</option>
+            <option value="ngo">NGO</option>
+        </select>
+
+        <!-- Login Button -->
+        <button type="submit">Login</button>
+    </form>
 </div>
+
 </body>
 </html>
