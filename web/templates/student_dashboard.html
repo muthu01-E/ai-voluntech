@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+<h2>Student Dashboard</h2>
+
+<form method="post">
+    <input name="skill" placeholder="Your Skill">
+    <input name="interest" placeholder="Your Interest">
+    <input name="location" placeholder="Your Location">
+    <button>Get Recommendations</button>
+</form>
+
+{% for r in rec %}
+<div class="card">
+    <b>{{ r[0] }}</b><br>
+    Match Score: {{ r[1] }}
+</div>
+{% endfor %}
+
+</div>
+</body>
+</html>
